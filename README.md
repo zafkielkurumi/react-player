@@ -5,4 +5,6 @@
 
 ## 主要内容
 1. 主要是对H5 audio标签的实践，在播放器中使用了部分audio相关api
-2. 结合react-router，react-redux
+2. 结合react-router，react-redux;
+    <img width="280" src="screenshots/1.jpg"/>
+
