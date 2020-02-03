@@ -1,0 +1,147 @@
+.bottom_box{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 53px;
+    width: 100%;
+}
+.bg {
+    
+    min-width: 982px;
+    padding-top: 6px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    color: white;
+    background: url('~assets/images/playbar.png');
+    .player {
+        width: 980px;
+        margin: auto;
+        display: flex;
+    }
+}
+
+
+.avatar {
+    margin-left: 21px;
+    margin-right: 15px;
+    margin-top: 6px;
+    width: 34px;
+    height: 34px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.progress{
+    width: 608px;
+    .top{
+        height: 28px;
+        line-height: 28px;
+        .song_name{
+            color: #fff;
+            text-decoration: none;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        .time{
+            margin-top: -3px;
+        }
+    }
+}
+
+// 操作 operate
+.pre,
+.play,
+.pause,
+.next{
+    background: url('~assets/images/playbar.png');
+    cursor: pointer;
+}
+
+.btns {
+    display: flex;
+    width: 116px;
+    justify-content: space-between;
+    align-items: center;
+    .pre {
+        width: 28px;
+        height: 28px;
+        background-position:  0 -130px;
+        &:hover {
+            background-position:  -30px -130px;
+        }
+    }
+    .play {
+        width: 36px;
+        height: 36px;
+        background-position: 0 -204px;
+        &:hover {
+            background-position:  -40px -204px;
+        }
+    }
+    .pause{
+        width: 36px;
+        height: 36px;
+        background-position:  0 -165px;
+        &:hover {
+            background-position:  -40px -165px;
+        }
+    }
+    .next {
+        width: 28px;
+        height: 28px;
+        background-position: -80px -130px;
+        &:hover {
+            background-position:  -110px -130px;
+        }
+    }
+}
+
+// progress
+.progressbar,
+.readeybar,
+.finishbar {
+    height: 9px;
+    position: relative;
+    background: url('~assets/images/statbar.png') right 0;
+    // transition: ;
+}
+.progressbar {
+    width: 500px;
+    padding-top: 6px;
+}
+.readeybar {
+    background-position:  right -30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 0;
+}
+.finishbar {
+    background-position: left -66px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 0;
+}
+
+.pbar{
+    width: 22px;
+    height: 24px;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    // transform: translateY(-50%);
+    z-index: 4;
+    background: url('~assets/images/iconall.png') no-repeat 0 -250px;
+}
