@@ -45,8 +45,8 @@ export function dragHandle(target, onMouseMove, onMouseEnd) {
                     const distX = moveEvent.clientX - clientX + initialPos.x;
                     const distY = moveEvent.clientY - clientY + initialPos.y;
                     return {
-                        x: distX >= 493 ? 493 : (distX <= 0 ? 0 : distX), // 播放进度条
-                        y: distY <= -90 ? -90 : (distY >= 0 ? 0 : distY), // 声音
+                        x: distX, // 播放进度条
+                        y: distY , // 声音
                         z:initialPos.z
                     }
                 }),

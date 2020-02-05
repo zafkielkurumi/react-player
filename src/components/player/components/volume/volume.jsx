@@ -3,6 +3,9 @@ import './volume.scss';
 import PropTypes from 'prop-types';
 import { dragHandle } from '../../drag_handle';
 
+
+// ref问题，转发不能到class组件 待解决
+
 export class Volume extends React.Component {
     // todo audio 属于volume
     static propTypes = {
@@ -31,10 +34,11 @@ export class Volume extends React.Component {
     // vol拖动
     onMouseMove = (pos) => {
         if (this.props.audio) {
-            const y = Math.abs(pos.y);
+            const disty = pos.y <= -90 ? -90 : (pos.y >= 0 ? 0 : pos.y);
+            const y = Math.abs(disty);
             const volPercent = y / 90;
             this.setState({
-                transform: `translate3d(0px , ${pos.y}px, 1px)`,
+                transform: `translate3d(0px , ${disty}px, 1px)`,
                 currentVol: `${y}px`
             })
             this.props.audio.volume = volPercent;

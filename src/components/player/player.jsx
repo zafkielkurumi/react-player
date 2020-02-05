@@ -43,7 +43,7 @@ export class Player extends React.Component {
     onMouseMove = (pos) => {
         this.isDraging = true;
         this.setState({
-            finishWidth: pos.x,
+            finishWidth: pos.x >= 493 ? 493 : (pos.x <= 0 ? 0 : pos.x),
         })
     }
 
@@ -208,8 +208,7 @@ export class Player extends React.Component {
                         onTimeUpdate={this.onTimeUpdate}
                         onCanPlay={this.onCanPlay}
                         autoPlay
-                        // src="http://m7.music.126.net/20200202223347/d594f13cac6a398670e050cc5d8689c5/ymusic/465b/da1f/7e9a/7c3f24036d2ee7c12a01e6579b78f4dd.mp3"
-                        src={props.curSong.url}
+                         src={props.curSong.url}
                     ></audio>
                     <div className="player">
                         {/* 操作播放暂停 */}

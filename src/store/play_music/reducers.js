@@ -22,7 +22,7 @@ export function musicList(state = [], action) {
 }
 
 
-export function curSong(state = {}, action) {
+export function curSong(state = { url: 'http://m7.music.126.net/20200202223347/d594f13cac6a398670e050cc5d8689c5/ymusic/465b/da1f/7e9a/7c3f24036d2ee7c12a01e6579b78f4dd.mp3'}, action) {
     switch (action.type) {
         case PLAY:
             return action.song;
