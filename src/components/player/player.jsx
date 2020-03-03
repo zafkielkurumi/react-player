@@ -170,6 +170,7 @@ export class Player extends React.Component {
         }
     }
 
+
     nextMusic = () => {
         const { musicList, curSong, playMusic } = this.props;
         const index = musicList.findIndex(r => r.id === curSong.id);
@@ -240,7 +241,7 @@ export class Player extends React.Component {
                             </div>
                         </div>
                         <div style={{ margin: '11px 0 0 20px', display: 'flex' }}>
-                            <Volume audio={this.audio}></Volume>
+                            <Volume setVol={(vol) => this.audio.Volume = vol}></Volume>
                             <MusicList
                                 musicList={props.musicList}
                                 curSong={props.curSong}
