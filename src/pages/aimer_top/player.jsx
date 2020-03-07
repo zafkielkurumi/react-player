@@ -1,4 +1,3 @@
-import React from 'react';
 import {Player} from 'components';
 import { connect } from 'react-redux';
 import { deleteMusic, playAndAdd, clearMusic } from 'store/play_music/actions';

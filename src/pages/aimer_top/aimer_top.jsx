@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { API } from 'http/apis';
-import { playAndAdd, addMusic, clearMusic, deleteMusic } from 'store/play_music/actions';
+import { playAndAdd, addMusic,  } from 'store/play_music/actions';
 import './aimer_top.scss';
 import { connect } from 'react-redux';
 import aimer from 'assets/images/aimer.jpg'
@@ -16,7 +16,7 @@ export default class AimerTop extends React.Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         API.getTopSong('16152').then(songs => {
             this.setState({
                 songs
