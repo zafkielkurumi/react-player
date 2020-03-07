@@ -1,5 +1,5 @@
-# react-study
-**基于create-react-app, 仿写网易云web播放器学习react**
+# react-player
+**基于create-react-app, 仿写网易云web播放器**
 <br/>
 接口用的是[Binaryify大佬的 - NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
