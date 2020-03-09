@@ -8,7 +8,11 @@ import aimer from 'assets/images/aimer.jpg'
 
 
 export default class AimerTop extends React.Component {
-
+    static propTypes = {
+        songs: PropTypes.array,
+        onPlay: PropTypes.func,
+        onAdd: PropTypes.func,
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -56,11 +60,7 @@ const SongList = ({ songs, onDoubleClick, onPlay, onAdd }) => {
     </li>)
     return songTitle
 }
-SongList.prototype = {
-    songs: PropTypes.bool.isRequired,
-    onPlay: PropTypes.func.isRequired,
-    onAdd: PropTypes.func.isRequired,
-}
+
 
 const mapStateToProps = (state, ownProps) => ({
     songs: ownProps.songs,

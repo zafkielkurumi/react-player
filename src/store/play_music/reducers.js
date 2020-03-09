@@ -12,7 +12,7 @@ export function musicList(state = [], action) {
             return [...state, action.song]
         }
         case DELETE:
-            return state.filter(r => r.id != action.song.id)
+            return state.filter(r => r.id !== action.song.id)
         case CLEAR: return []
             
     
